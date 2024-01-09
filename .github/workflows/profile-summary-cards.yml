@@ -11,7 +11,11 @@ jobs:
     name: generate
 
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v4
+      - name: Use Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
       - uses: vn7n24fzkq/github-profile-summary-cards@release
         env:
           GITHUB_TOKEN: ${{ secrets.PROFILE_SUMMARY_CARDS_TOKEN }}
