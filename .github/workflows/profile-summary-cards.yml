@@ -2,22 +2,27 @@ name: GitHub-Profile-Summary-Cards
 
 on:
   schedule: # execute every 24 hours
-    - cron: "* */24 * * *"
+    - cron: "0 15 * * *"
   workflow_dispatch:
 
 jobs:
   build:
     runs-on: ubuntu-latest
-    name: generate
-
+    permissions:
+      contents: write
     steps:
       - uses: actions/checkout@v4
-      - name: Use Node.js
-        uses: actions/setup-node@v4
-        with:
-          node-version: 20
+
+      - name: Set git identity
+        run: |
+          git config user.name "AniP-gt"
+          git config user.email "ID+YOUR_GITHUB_USERNAME@users.noreply.github.com"
+
       - uses: vn7n24fzkq/github-profile-summary-cards@release
         env:
           GITHUB_TOKEN: ${{ secrets.PROFILE_SUMMARY_CARDS_TOKEN }}
         with:
           USERNAME: ${{ github.repository_owner }}
+          UTC_OFFSET: 9
+          BRANCH_NAME: "main"
+          AUTO_PUSH: true
