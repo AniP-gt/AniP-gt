@@ -22,13 +22,3 @@
 ```
 
     
-
----
-
-![](./2-most-commit-language.svg)
-
-```
-![](https://raw.githubusercontent.com/AniP-gt/AniP-gt/main/profile-summary-card-output/rose_pine/2-most-commit-language.svg)
-```
-
-    

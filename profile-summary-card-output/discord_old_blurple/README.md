@@ -22,13 +22,3 @@
 ```
 
     
-
----
-
-![](./2-most-commit-language.svg)
-
-```
-![](https://raw.githubusercontent.com/AniP-gt/AniP-gt/main/profile-summary-card-output/discord_old_blurple/2-most-commit-language.svg)
-```
-
-    
